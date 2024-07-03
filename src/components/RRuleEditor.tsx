@@ -10,6 +10,7 @@ import configureInitialState from "../utils/configureInitialState";
 import translateLabel from "../utils/translateLabel";
 import { RRuleEditorProps } from "./RRuleEditor.types";
 import "../styles/index.css";
+import "../styles/react-datetime.css";
 import { RepeatDetail } from "./Repeat/Repeat.types";
 import english from "../translations/english";
 

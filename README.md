@@ -36,6 +36,7 @@ In your CSS index file don't forget to import styles:
 ```css
 // this lib uses boostrap (v.5.3.3)
 @import '~bootstrap/dist/css/bootstrap.css';
+@import "~react-datetime/css/react-datetime.css";
 ```
 
 Then you're good to go.  

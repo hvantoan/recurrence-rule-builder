@@ -4,7 +4,6 @@ import TextareaAutosize from "react-textarea-autosize";
 import "./index.css";
 import githubLogo from "./assets/image/github_logo.png";
 import RRuleEditor, { trans } from "recurrence-rule-builder";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "react-datetime/css/react-datetime.css";
 interface AppState {
   rrule: string;
@@ -42,16 +41,24 @@ class App extends Component<AppProps, AppState> {
     const { rrule, isCopied } = this.state;
 
     return (
-      <div>
-        <div className="app-navbar">
-          <a href="https://github.com/fafruch/react-rrule-generator">
-            &lt; go back to <img className="app-navbar-ghlogo" src={githubLogo} alt="Github logo" />
-            /fafruch
+      <div className="container">
+        <div className="app-navbar d-flex align-items-center">
+          <a href="https://github.com/hvantoan/recurrence-rule-builder">
+            &lt; Go back to Github
+            <img
+              className="app-navbar-ghlogo"
+              src={githubLogo}
+              alt="Github logo"
+              style={{
+                height: "20px",
+              }}
+            />
+            /hvantoan
           </a>
 
           <iframe
             title="github-star"
-            src="https://ghbtns.com/github-btn.html?user=fafruch&repo=react-rrule-generator&type=star&count=true&size=medium"
+            src="https://ghbtns.com/github-btn.html?user=hvantoan&repo=recurrence-rule-builder&type=star&count=true&size=medium"
             frameBorder="0"
             scrolling="0"
             width="78px"
@@ -59,16 +66,15 @@ class App extends Component<AppProps, AppState> {
           />
         </div>
         <div className="app-header">
-          <h1>React RRule Generator</h1>
+          <h1>recurrence-rule-builder</h1>
         </div>
 
-        <div className="app-desc">Recurrence rules generator form built with React</div>
+        <div className="app-desc">
+          A user-friendly UI library for easily creating recurrence rules using pure Bootstrap. Simplify your scheduling
+          tasks with intuitive interfaces and seamless integration.
+        </div>
 
-        <div className="app container">
-          <h5>
-            <strong>{"<RRuleGenerator />"}</strong>
-          </h5>
-
+        <div className="app container pt-4">
           <RRuleEditor
             onChange={this.handleChange}
             value={this.state.rrule}
@@ -92,7 +98,7 @@ class App extends Component<AppProps, AppState> {
             <strong>Example handling</strong>
           </h5>
 
-          <div className="px-3 pt-3 border rounded">
+          <div className="px-3 pt-3 border rounded pb-3">
             <div className="form-group row d-flex align-items-sm-center">
               <div className="col-sm-2 text-sm-right">
                 <span className="col-form-label">
@@ -103,12 +109,14 @@ class App extends Component<AppProps, AppState> {
               <div className="col-sm-8">
                 <TextareaAutosize
                   className={`form-control rrule ${isCopied ? "rrule-copied" : "rrule-not-copied"}`}
+                  onChange={(e) => {
+                    this.setState({ rrule: e.target.value });
+                  }}
                   value={rrule}
-                  readOnly
                 />
               </div>
 
-              <div className="col-sm-2">
+              <div className="col-sm-2 pb-2">
                 <CopyToClipboard text={rrule} onCopy={this.handleCopy}>
                   <button
                     aria-label="Copy generated RRule"
@@ -128,7 +136,7 @@ class App extends Component<AppProps, AppState> {
           <h5>
             <strong>Config</strong>
           </h5>
-          <div className="px-3 pt-3 border rounded">
+          <div className="px-3 pt-3 border rounded pb-3">
             <div className="form-group row d-flex align-items-sm-center">
               <div className="col-sm-2 text-sm-right">
                 <span className="col-form-label">
