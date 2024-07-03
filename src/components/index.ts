@@ -1,3 +1,3 @@
-import RRuleBootstrap from "./RRuleBootstrap";
+import RRuleEditor from "./RRuleEditor";
 
-export default RRuleBootstrap;
+export default RRuleEditor;

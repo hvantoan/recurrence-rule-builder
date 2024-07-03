@@ -8,13 +8,14 @@ import computeRRuleToString from "../utils/computeRRule/toString/computeRRule";
 import computeRRuleFromString from "../utils/computeRRule/fromString/computeRRule";
 import configureInitialState from "../utils/configureInitialState";
 import translateLabel from "../utils/translateLabel";
-import { RRuleBootstrapProps } from "./RRuleBootstrap.types";
+import { RRuleEditorProps } from "./RRuleEditor.types";
 import "../styles/index.css";
+import "../styles/react-datetime.css";
 import { RepeatDetail } from "./Repeat/Repeat.types";
-import english from "./../translations/english";
+import english from "../translations/english";
 
-class RRuleBootstrap extends PureComponent<RRuleBootstrapProps> {
-  static defaultProps: RRuleBootstrapProps = {
+class RRuleEditor extends PureComponent<RRuleEditorProps> {
+  static defaultProps: RRuleEditorProps = {
     id: null,
     value: "",
     config: {},
@@ -27,22 +28,22 @@ class RRuleBootstrap extends PureComponent<RRuleBootstrapProps> {
   state = configureInitialState(this.props.config, this.props.calendarComponent, this.props.id);
 
   componentWillMount() {
-    if (this.props.onChange === RRuleBootstrap.defaultProps.onChange) {
+    if (this.props.onChange === RRuleEditor.defaultProps.onChange) {
       // no onChange() was provided
       throw new Error(
-        "No onChange() function has been passed to RRuleBootstrap. \n" +
+        "No onChange() function has been passed to RRuleEditor. \n" +
           "Please provide one, it's needed to handle generated value."
       );
     }
 
     if (this.props.value) {
-      // if value is provided to RRuleBootstrap, it's used to compute state of component's forms
+      // if value is provided to RRuleEditor, it's used to compute state of component's forms
       const data = computeRRuleFromString(this.state.data, this.props.value);
       this.setState({ data });
     }
   }
 
-  componentWillReceiveProps(nextProps: RRuleBootstrapProps) {
+  componentWillReceiveProps(nextProps: RRuleEditorProps) {
     if (nextProps.value) {
       const data = computeRRuleFromString(this.state.data, nextProps.value);
       this.setState({ data });
@@ -104,4 +105,4 @@ class RRuleBootstrap extends PureComponent<RRuleBootstrapProps> {
   }
 }
 
-export default RRuleBootstrap;
+export default RRuleEditor;

@@ -4,7 +4,7 @@ import { RepeatMonthlyMode } from "./Repeat/Monthly/RepeatMonthly.types";
 import { EndMode, TranslationsType } from "./End/End.types";
 import "../styles/index.css";
 
-export interface RRuleBootstrapProps {
+export interface RRuleEditorProps {
   id?: string | undefined | null;
   config?: RRuleConfig;
   value?: string;
