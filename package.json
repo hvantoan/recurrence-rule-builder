@@ -1,0 +1,70 @@
+{
+  "name": "recurrence-rule-builder",
+  "version": "1.0.1",
+  "private": false,
+  "author": "hvantoan <it.vantoan@gmail.com>",
+  "description": "A user-friendly UI library for easily creating recurrence rules using pure Bootstrap. Simplify your scheduling tasks with intuitive interfaces and seamless integration.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hvantoan/rrule-builder.git"
+  },
+  "keywords": [
+    "rrule-builder",
+    "rrule-builder-ts",
+    "theme",
+    "mui",
+    "react-component"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": ">=18.3.1",
+    "react-dom": ">=18.3.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "react": ">=18.3.1",
+    "react-bootstrap": "^2.10.3",
+    "react-datetime": "^3.2.0",
+    "react-dom": ">=18.3.1",
+    "rrule": "^2.8.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-url": "^8.0.2",
+    "@svgr/rollup": "^8.1.0",
+    "@chromatic-com/storybook": "^1.5.0",
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@storybook/addon-essentials": "^8.1.11",
+    "@storybook/addon-interactions": "^8.1.11",
+    "@storybook/addon-links": "^8.1.11",
+    "@storybook/addon-onboarding": "^8.1.11",
+    "@storybook/blocks": "^8.1.11",
+    "@storybook/react": "^8.1.11",
+    "@storybook/react-vite": "^8.1.11",
+    "@storybook/test": "^8.1.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "rollup": "^4.18.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.1.11",
+    "typescript": "^5.5.2"
+  }
+}
