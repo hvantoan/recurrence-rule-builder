@@ -1,19 +1,19 @@
 {
   "name": "recurrence-rule-builder",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": false,
   "author": "hvantoan <it.vantoan@gmail.com>",
   "description": "A user-friendly UI library for easily creating recurrence rules using pure Bootstrap. Simplify your scheduling tasks with intuitive interfaces and seamless integration.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hvantoan/rrule-builder.git"
+    "url": "https://github.com/hvantoan/recurrence-rule-builder.git"
   },
   "keywords": [
+    "recurrence-rule-builder",
     "rrule-builder",
-    "rrule-builder-ts",
-    "theme",
-    "mui",
-    "react-component"
+    "recurrence",
+    "rrule",
+    "rrule-editor"
   ],
   "license": "MIT",
   "main": "dist/index.js",

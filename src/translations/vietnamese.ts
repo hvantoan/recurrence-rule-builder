@@ -17,12 +17,12 @@ export default {
     dec: "Tháng Mười Hai",
   },
   days_short: {
-    mon: "Thú Hai",
-    tue: "Thú Ba",
-    wed: "Thú Tư",
-    thu: "Thú Năm",
-    fri: "Thú Sáu",
-    sat: "Thú Bảy",
+    mon: "Thứ Hai",
+    tue: "Thứ Ba",
+    wed: "Thứ Tư",
+    thu: "Thứ Năm",
+    fri: "Thứ Sáu",
+    sat: "Thứ Bảy",
     sun: "Chủ Nhật",
   },
   days: {
@@ -85,6 +85,6 @@ export default {
     never: "Không bao giờ",
     after: "Sau",
     on_date: "Vào ngày",
-    executions: "lần thực thi.",
+    executions: "lần thực hiện.",
   },
 };

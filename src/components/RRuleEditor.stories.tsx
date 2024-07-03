@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import RRuleBootstrap from "./RRuleBootstrap";
+import RRuleEditor from "./RRuleEditor";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { trans } from "../../src";
 
 export default {
-  title: "RRuleBootstrap",
-  component: RRuleBootstrap,
-} as Meta<typeof RRuleBootstrap>;
-``;
-
-const Template: StoryFn<typeof RRuleBootstrap> = (args) => {
+  title: "RRuleEditor",
+  component: RRuleEditor,
+} as Meta<typeof RRuleEditor>;
+const Template: StoryFn<typeof RRuleEditor> = (args) => {
   const [rrule, setRRule] = useState<string>(
     "DTSTART:20240702T102400Z\nRRULE:FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR,SA,SU;UNTIL=20240718T102500Z"
   );
   return (
     <>
       <div className="d-grid gap-4">
-        <RRuleBootstrap {...args} value={rrule} onChange={(value) => setRRule(value)} />
+        <RRuleEditor {...args} value={rrule} onChange={(value) => setRRule(value)} />
         <input aria-label="RRuleString" className="form-control" value={rrule} disabled />
       </div>
     </>
@@ -26,8 +23,8 @@ const Template: StoryFn<typeof RRuleBootstrap> = (args) => {
 };
 export const Primary = Template.bind({});
 Primary.args = {
-  id: "RRuleBootstrap",
-  translations: trans.vietnamese,
+  id: "RRuleEditor",
+  // translations: trans.vietnamese,
   config: {
     hideStart: false,
     hideEnd: false,

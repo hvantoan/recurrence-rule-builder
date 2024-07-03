@@ -1,5 +1,5 @@
-import RRuleBootstrap from "./components/RRuleBootstrap";
+import RRuleEditor from "./components";
 
-export default RRuleBootstrap;
+export default RRuleEditor;
 
 export { default as trans } from "./translations";
