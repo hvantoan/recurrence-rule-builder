@@ -43,7 +43,7 @@ Then you're good to go.
 Just use it:
 
 ```tsx
-import RRuleGenerator from "recurrence-rule-builder";
+import RRuleEditor from "recurrence-rule-builder";
 
 // render it as it is
 
