@@ -1,6 +1,6 @@
 {
   "name": "recurrence-rule-builder",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "author": "hvantoan <it.vantoan@gmail.com>",
   "description": "A user-friendly UI library for easily creating recurrence rules using pure Bootstrap. Simplify your scheduling tasks with intuitive interfaces and seamless integration.",
