@@ -24,4 +24,5 @@ export interface RRuleConfig {
   weekStartsOnSunday?: boolean; // Week start on Sunday
   formatStart?: string; // Format  display value for Start Date
   formatEnd?: string; // Format display value for End Date
+  initialStartDate?: string; // Start Date
 }
