@@ -64,7 +64,7 @@ class RRuleEditor extends PureComponent<RRuleEditorProps> {
       data: { start, repeat, end, options, error },
     } = this.state;
     return (
-      <div>
+      <div id={id}>
         {!options.hideError && error && (
           <div className="alert alert-danger">
             {translateLabel(this.props.translations, "invalid_rrule", { value: (error as any).value })}
