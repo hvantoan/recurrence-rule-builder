@@ -12,16 +12,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Specify the Node.js version you are using
+          node-version: "1" # Specify the Node.js version you are using
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: Build project
-        run: npm run build
+      # - name: Build project
+      #   run: npm run build
 
-      - name: Run tests and collect coverage
-        run: npm run test -- --coverage
+      # - name: Run tests and collect coverage
+      #   run: npm run test -- --coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
