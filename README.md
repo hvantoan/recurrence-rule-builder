@@ -2,8 +2,21 @@
 
 > A user-friendly UI library for easily creating recurrence rules using pure Bootstrap. Simplify your scheduling tasks with intuitive interfaces and seamless integration.
 
-[![LICENSE](https://img.shields.io/npm/l/express.svg)](LICENSE)
-[![npm](https://img.shields.io/npm/dm/localeval.svg)](https://npm-stat.com/charts.html?package=rrule-builder)
+## License
+
+[![NPM version][npm-version-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-downloads-url]
+[![MIT License][license-image]][license-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
+[npm-url]: https://npmjs.org/package/moment
+[npm-version-image]: https://img.shields.io/npm/v/recurrence-rule-builder.svg?style=flat
+[npm-downloads-image]: https://img.shields.io/npm/dm/recurrence-rule-builder.svg?style=flat
+[npm-downloads-url]: https://npmcharts.com/compare/recurrence-rule-builder?minimal=true
+[coveralls-image]: https://coveralls.io/repos/moment/recurrence-rule-builder/badge.svg?branch=develop
+[coveralls-url]: https://coveralls.io/r/moment/recurrence-rule-builder?branch=develop
 
 ![Screenshot](https://raw.githubusercontent.com/hvantoan/recurrence-rule-builder/main/example/public/english-recurrence-rule-builder.png)
 
