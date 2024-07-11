@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "04:00"
+    commit-message:
+      prefix: "deps"
+    auto-merge: true
+    reviewers:
+      - "hvantoan"
+    assignees:
+      - "hvantoan"
