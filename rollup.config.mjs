@@ -8,6 +8,8 @@ import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import typescriptEngine from 'typescript';
 
+import { codecovRollupPlugin } from "@codecov/rollup-plugin";
+
 const packageJson = JSON.parse(readFileSync('./package.json'));
 
 export default defineConfig(
@@ -61,7 +63,12 @@ export default defineConfig(
           'setupTests.ts',
           'vitest.config.ts',
         ],
-      })
+      }),
+      codecovRollupPlugin({
+        enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
+        bundleName: "recurrence-rule-builder",
+        uploadToken: process.env.CODECOV_TOKEN,
+      }), 
     ],
   },
   {
