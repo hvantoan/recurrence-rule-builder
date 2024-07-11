@@ -16,8 +16,7 @@ jobs:
         with:
           node-version: "18"
       - name: Build the project
-        run: ||
-          cd example
+        run: cd example
           npm install
           npm run build
 
